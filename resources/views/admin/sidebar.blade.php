@@ -39,7 +39,8 @@
 
     <!-- Nav Item - Produk -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link {{ request()->routeIs('products.index') ? 'active' : '' }}"
+            href="{{ route('products.index') }}">
             <i class="fas fa-fw fa-box"></i> <!-- Ikon untuk Produk -->
             <span>Produk</span>
         </a>
@@ -56,14 +57,16 @@
 
     <!-- Nav Item - Costumer -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link {{ request()->routeIs('customers.index') ? 'active' : '' }}"
+            href="{{ route('customers.index') }}">
             <i class="fas fa-fw fa-users"></i> <!-- Ikon untuk Costumer -->
             <span>Costumer</span>
         </a>
     </li>
     <!-- Nav Item - Transaksi -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link {{ request()->routeIs('transactions.index') ? 'active' : '' }}"
+            href="{{ route('transactions.index') }}">
             <i class="fas fa-fw fa-money-bill-wave"></i> <!-- Ikon untuk Transaksi -->
             <span>Transaksi</span>
         </a>
